@@ -1,0 +1,11 @@
+{
+    "extends": [
+      "@wordpress/stylelint-config",
+      "@wordpress/stylelint-config/scss",
+      "stylelint-config-standard-scss"
+    ],
+    "rules": {
+      "indentation": 4
+    }
+  }
+  

@@ -1,0 +1,52 @@
+{
+  "name": "base-wp-plugin",
+  "version": "1.0.0",
+  "description": "Skeleton WordPress plugin to use as a base to build WordPress themes from scratch.",
+  "main": "build/js/index.js",
+  "scripts": {
+    "prod": "cross-env NODE_ENV=production webpack --mode production --progress",
+    "dev": "cross-env NODE_ENV=development webpack --watch --mode development --progress",
+    "lint": "eslint assets/js/*",
+    "lint:fix": "eslint --fix assets/js/*",
+    "lint-css": "stylelint **/*.scss",
+    "lint-css:fix": "stylelint **/*.scss --fix",
+    "build": "npm run lint-css:fix && npm run lint:fix && npm run prod"
+  },
+  "keywords": [
+    "wordpress",
+    "wordpress-plugin",
+    "plugin"
+  ],
+  "author": "sarahcssiqueira",
+  "license": "GPLv2 or later",
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-react": "^7.22.5",
+    "@wordpress/eslint-plugin": "^14.10.0",
+    "@wordpress/stylelint-config": "^21.20.0",
+    "babel-loader": "^9.1.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "prettier": "^3.0.0",
+    "sass-loader": "^13.3.2",
+    "stylelint": "^15.10.1",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-webpack-plugin": "^4.1.1",
+    "terser-webpack-plugin": "^5.3.9",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}

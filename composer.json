@@ -1,0 +1,32 @@
+{
+    "name": "sarahcssiqueira/base-wp-plugin",
+    "description": "Base WordPress plugin to use as a base to build WordPress plugins from scratch.",
+    "license": "GPL-2.0+",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+        "name": "sarahcssiqueira",
+        "email": "sarahcosiqueira@gmail.com",
+        "homepage": "https://sarahjobs.com"
+        }
+    ],
+    "support": {
+        "src": "https://github.com/sarahcssiqueira/base-wp-plugin",
+        "issues": "https://github.com/sarahcssiqueira/base-wp-plugin/issues"
+      },
+    "autoload": {
+        "psr-4": {
+            "BaseWpPlugin\\Inc\\": "inc/"
+        }
+    },
+    "scripts": {
+        "cstd": "./vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs",
+        "cs": "./vendor/bin/phpcs --standard=.phpcs.xml --report=summary .",
+        "cbf": "./vendor/bin/phpcbf --standard=.phpcs.xml ."
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.7",
+        "wp-coding-standards/wpcs": "^2.3",
+        "phpcompatibility/php-compatibility": "^9.3"
+    }
+}
