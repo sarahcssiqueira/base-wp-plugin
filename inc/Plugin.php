@@ -12,11 +12,12 @@ namespace BaseWpPlugin\Inc;
  */
 class Plugin {
 	/**
-	 * Hooks.
+	 * Custom constructor for handle WordPress Hooks
 	 */
-	public function __construct() {
+	public static function initialize() {
 
-		add_action( 'admin_notices', [ $this, 'display_hello_world' ] );
+		$self = new self();
+		add_action( 'admin_notices', [ $self, 'display_hello_world' ] );
 	}
 	/**
 	 * Display 'Hello from the Base WP Plugin!' message on admin panel
@@ -28,5 +29,7 @@ class Plugin {
 		</div>
 		<?php
 	}
+};
 
-}
+
+Plugin::initialize();
