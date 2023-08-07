@@ -19,10 +19,6 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BASE_WP_PLUGIN_VERSION', '1.0.0' );
-define( 'BASE_WP_PLUGIN_FILE', __FILE__ );
-define( 'BASE_WP_PLUGIN_DIR', __DIR__ );
-
 /**
  * Composer Autoload
  */
@@ -33,6 +29,7 @@ if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
 /**
  * Bootstraps the plugin
  */
-use BaseWpPlugin\Inc\Plugin;
+use BaseWpPlugin\Inc\Init;
 
-$the_plugin = new Plugin();
+$init = new Init();
+$init->register_classes_list();
