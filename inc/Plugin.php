@@ -1,6 +1,6 @@
 <?php
 /**
- * Class to bootstrap the plugin
+ * Main plugin class
  *
  * @package BaseWPPlugin
  */
@@ -8,7 +8,7 @@
 namespace BaseWpPlugin\Inc;
 
 /**
- * Bootstrap the plugin.
+ * Main class
  */
 class Plugin {
 	/**
@@ -30,6 +30,3 @@ class Plugin {
 		<?php
 	}
 };
-
-
-Plugin::initialize();
