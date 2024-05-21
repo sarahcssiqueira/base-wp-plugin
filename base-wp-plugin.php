@@ -17,14 +17,26 @@
  * @package BaseWpPlugin
  */
 
+/**
+ * Exit is accessed directly.
+ */
 defined( 'ABSPATH' ) || exit;
+
+
+/**
+ * Define essential constants.
+ */
+define( 'BASEWPPLUGIN_VERSION', '1.0.0' );
+define( 'BASEWPPLUGIN_PHP_MINIMUM', '7.4.0' );
+define( 'BASEWPPLUGIN_WP_MINIMUM', '6.4.0' );
 
 /**
  * Composer Autoload
  */
-if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
-	require_once dirname( __FILE__ ) . '/vendor/autoload.php';
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+	require_once __DIR__ . '/vendor/autoload.php';
 }
+
 
 /**
  * Bootstraps the plugin
